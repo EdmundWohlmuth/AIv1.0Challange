@@ -17,10 +17,6 @@ public class AIScript : MonoBehaviour
     void Update()
     {
         gameObject.transform.Translate(0, 0, speed * Time.deltaTime);
-
-        // jumping
-        Random.Range(1, 20);
-
     }
 
     private void OnCollisionEnter(Collision collision) // collision detection
@@ -28,6 +24,11 @@ public class AIScript : MonoBehaviour
         if (collision.gameObject.tag == "floor") // ignore floor collision
         {
             return;
+        }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Big damage");
         }
 
         Debug.Log("I hit something"); 
