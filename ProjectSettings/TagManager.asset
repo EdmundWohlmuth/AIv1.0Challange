@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - floor
+  - playerCharacter
   layers:
   - Default
   - TransparentFX
